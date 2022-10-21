@@ -1,0 +1,500 @@
+:root{
+    --color-icon:#00b289;
+    --color-click:#009975;
+    --color-text: #4c4d5f;
+    --color-monthly:#60626e;
+    --color-quotations-box:#fbfcff;
+    --color-blue-shape:#f2faff;
+    --color-center:#47484c;
+    --box-shadow: 0 0 4.25rem 0 rgb(2 4 69 / 10%);
+}
+.has__arrow::after{
+    content:"\00a0›";
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+}
+
+.is-active{
+    color: var(--color-icon);
+}
+
+.main--page{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.main--page__wrap{
+    position: relative;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-top: 2.5rem; */
+    /* padding-bottom: 2.5rem; */
+}
+
+.main--section{
+    margin-top: 2.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* blue--shape(blue square) */
+.blue--shape{
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -80%;
+    right: -66%;
+    border-radius: 8rem;
+    background-color: var(--color-blue-shape);
+    transform: rotate(52deg);
+    z-index: -5;
+}
+
+/* section--plan */
+.section--plan{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 20rem;
+    flex-wrap: wrap;
+
+}
+.plan--pricing{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1.5rem;
+}
+.plan--pricing__large24{
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.plan--toggle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2.5rem;
+    margin-top: 3rem;
+}
+.plan__text{
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color-monthly);
+}
+
+/* section--plan -Toggle Switch*/
+.plan__switch--toggle{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+}
+.plan--toggle input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* -webkit-transform: 0.4s; */
+    transition: 0.4s;
+    background-color: var(--color-icon);
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    /* -webkit-transform: 0.4s; */
+    transition: 0.4s;
+    background-color: white;
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* section--plan -image */
+.plan__img{
+    position: absolute;
+    top: -2rem;
+    right: -8%;
+    background-color: transparent;
+}
+
+
+/* section--quotations */
+.quotations--box{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 61.9375rem;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    margin-bottom: 2.5rem;
+    border: 0.3px solid rgba(2, 4, 69, 0.2);
+    border-radius: 0.25rem; 
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-quotations-box);
+}
+
+.quotations--plan{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    padding-top: 1rem;
+    color: var(--color-monthly);
+}
+.quotations--plan__content{
+    font-size: 0.875rem;
+}
+
+/* quotations--pricing */
+.quotations--pricing{
+    line-height: 4;
+    margin-top: 1.5rem;
+    border-bottom: 0.125rem solid var(--color-icon);
+    font-weight: 600;
+}
+.currency{
+    position: relative;
+    font-size: 1.5rem;
+    bottom: 0.8rem;
+    margin-right: 0.5rem;
+}
+.cost--month{
+    font-size: 4rem;
+    margin-right: 0.5rem;
+}
+.pricing--month{
+    position: relative;
+    font-size: 1.5rem;
+    top: 0.8rem;
+}
+/* yearly text hidden */
+.quotations__text--yearly{
+    display: none;
+    text-align: right;
+    font-size: 1rem;
+    color: var(--color-monthly);
+}
+
+/* quotations--content */
+.quotations--content{
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+.quotations__img{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    /* width: 0.8rem; */
+    max-width: 100%;
+    top: 5;
+    margin-right: 0.8rem;
+}
+.quotations__text{
+    display: flex;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/* quotations--buttom */
+.quotations--buttom{
+    text-align: center;
+    width: 100%;
+    border-radius: 0.125rem;
+    padding: 1.5rem 0;
+    margin: 0;
+    background-color: var(--color-icon);
+}
+.buttom__main{
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    color: var(--color-quotations-box);
+}
+.quotations--buttom:hover{
+    background-color: var(--color-click);
+}
+
+/* quotations--popular */
+.quotations--popular{
+    position: absolute;
+    transform: rotate(46deg);
+    text-transform: uppercase;
+    font-weight: 600;
+    top: 38px;
+    left: auto;
+    right: -485px;
+    bottom: auto;
+    padding: 0.5rem 30rem;
+    background-color: var(--color-icon);
+    color: var(--color-quotations-box);
+}
+
+/* section--addition */
+.section--addition{
+    margin-top: 4rem;
+}
+.addition__text__heading{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+.addition__text__large{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--color-monthly);
+}
+
+/* -addition--box */
+.addition--box{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-quotations-box);
+    box-shadow: var(--box-shadow);
+}
+.addition--text{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-monthly);
+}
+.addition--text__large32{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.addition--content__large18{
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-monthly);
+}
+.addition--content__large16{
+    margin-bottom: 1rem;
+}
+.addition--content__link{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-icon);
+}
+
+
+/* section--content */
+.section--content{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 2rem;
+    background-color: var(--color-blue-shape);
+}
+.content--box{
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.content--box--left{
+    display: block;
+}
+.box__center__large40{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-center);
+}
+.content__green{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-icon);
+}
+.content--box__buttom{
+    max-width: 10rem;
+    border-radius: 0.125rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-icon);
+}
+.content--box__buttom:hover{
+    background-color: var(--color-click)
+}
+
+
+/* section--questions */
+.section--questions{
+    font-weight: 600;
+    padding-top: 2rem;
+}
+.questions__heading--center{
+    margin: 2.5rem 0;
+}
+
+.questions__tag{
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 0.8rem;
+}
+.questions__tag--flex{
+    display: flex;
+    align-items: center;
+}
+.questions__dropdown{
+    vertical-align: middle;
+    height: 1.5rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.heading__text--large24{
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-center);
+    cursor: pointer;
+}
+.heading__text--large24:hover{
+    color: var(--color-icon);
+}
+
+.questions--heading__color{
+    text-align: center;
+    color: var(--color-icon);
+}
+
+.questions__hidden{
+    display: none;
+}
+.heading__text--large16{
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:560px) {
+    .quotations--box{
+        padding: 6% 5%;
+    }
+
+    .content--box__center{
+        display: flex;
+        justify-content: space-between;
+    }
+    .content--box--left{
+        min-width: 10.25rem;
+    }
+    .content--box__buttom{
+        vertical-align: middle;
+        min-width: 10rem;
+        margin-top: auto;
+        margin-left: 24%;
+        margin-bottom: auto;
+    }
+}
+
+@media (min-width:768px){
+    .main--section{
+        padding-top: 2rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .section--plan{
+        vertical-align: middle;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        max-width: 36rem;
+    }
+    .plan--pricing{
+        margin-bottom: 0;
+    }
+    .plan--pricing__large24{
+        font-size: 2rem;
+    }
+    .plan--toggle{
+        left: 0;
+        margin-top: 1.2rem;
+    }
+
+    .addition--box{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: auto;
+    }
+    .addition--content{
+        vertical-align: middle;
+        align-items: center;
+        transform: translateY(20%);
+        padding-bottom: 1.5rem;
+    }
+    .addition--text{
+        float: right;
+        vertical-align: middle;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (min-width:992px){
+    .section--quotations{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* การใช้มันต้องกำหนดขนาด(width)ตัวลูกของมัน */
+    }
+    .quotations--box{
+        width: 32%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+    .cost--month{
+        font-size: 3.5rem;
+    }
+    .quotations--buttom{
+        margin-top: auto;
+    }
+}

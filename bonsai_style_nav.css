@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Raleway:ital,wght@1,300&display=swap');
+*{
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Luxurious Roman', cursive;*/
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+a, h1, h2, h3, h4, h5, span{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+:root{
+    --color-icon:#00b289;
+    --color-click:#009975;
+    --color-text: #4c4d5f;
+    --color-monthly:#60626e;
+    --color-quotations-box:#fbfcff;
+    --color-blue-shape:#f2faff;
+    --color-white-hover:#f5f5f5;
+    --color-center:#47484c;
+}
+
+.header{
+    position: sticky;
+    height: 5.25rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px;
+    background-color: white;
+    z-index: 9;
+}
+.nav--main{
+    max-width: 70rem;
+    padding-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav--main--brand{
+    float: left;
+    margin-left: 5%;
+}
+.brand__text36{
+    bottom: 0.7rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--color-icon); 
+    z-index: 99;
+}
+
+.nav--menu{
+    display: none;
+}
+
+.nav--main__buttom{
+    position: relative;
+    float: right;
+    display: block;
+    width: 60px;
+    height: 60px;
+    top: -0.5rem;
+    padding: 16px;
+    margin-right: 5%;
+    border-style: none; 
+}
+.nav__buttom{
+    position: absolute;
+    width: 36px;
+    height: 3px;
+    border-radius: 16%;
+    right: 0.75rem;
+    background-color: var(--color-text);
+    z-index: 99;
+}
+.nav__buttom--line1{
+    top: 16px;
+}
+
+.nav__buttom--line2{
+    top: 28px;
+}
+.transform:active { 
+    transition: all 10s ease;
+}
+.transform-active {
+    display: none;
+}
+
+.nav__buttom--line3{
+    top: 40px;
+}
+
+
+/* hidden button click */
+.nav__hidden{
+    display: none;
+    background-color: white;
+    width: auto;
+    height: 150rem;
+    z-index: 88;
+}
+.main--nav__hidden{
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.main--nav__allheading{
+    margin-right: 1rem;
+}
+.main--nav__heading{
+    display: flex;
+    font-size: 1.375rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-monthly);
+}
+.main--nav__text18{
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding-right: 1rem;
+}
+.main--nav__img{
+    margin-left: auto; /*ทำให้อยู่ด้านขวาสุด*/
+    align-items: center;
+    vertical-align: middle;
+    width: 0.6rem;
+}
+
+.main--nav__tag--hiden{
+    display: none;
+}
+/* Product nav */
+.main--nav__link{
+    margin: 1rem;
+}
+.main--nav__link16{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.main--nav__link14{
+    font-size: 0.875rem;
+}
+/* Templates nav */
+.main--nav__link--flex{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    
+}
+.nav--Templates__img{
+    vertical-align: middle;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+/* nav button */
+.nav__button{
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0.8rem 0;
+    border-radius: 3px;
+}
+.nav__login__button {
+    border: 1px solid var(--color-icon);
+}
+.nav__login__text{
+    font-weight: 600;
+    color: var(--color-icon);
+}
+
+.nav__sf__button{
+    background-color: var(--color-icon);
+}
+.nav__sf__button:hover{
+    background-color: var(--color-click);
+}
+
+
+@media (min-width:992px){
+    /* hidden buttion  */
+    .nav--main__buttom{
+        display: none;
+    }
+
+    .nav--main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav--menu{
+        display: flex;
+        flex-direction: row-reverse;
+        vertical-align: middle;
+        align-items: center;
+    }
+    .nav--menu__wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5rem;
+    }
+
+    /* ส่วนbutton */
+    .nav--menu__button{
+        text-align: center;
+        border: 1px solid var(--color-icon);
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+    }
+    .nav--menu__btext{
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    .nav--menu__log{
+        color: var(--color-icon);
+    }
+    .nav--menu__button--log:hover{
+        background-color: var(--color-icon);
+        color: white;
+    }
+
+    .nav--menu__button--green{
+        background-color: var(--color-icon);
+    }
+    .nav--menu__st{
+        color: white;
+    }
+    .nav--menu__button--green:hover{
+        background-color: var(--color-click);
+    }
+
+    /* ส่วน menu ตรงกลาง */
+    .nav--menu__main{
+        display: flex; 
+        cursor: pointer;
+        padding: 0.8rem 1rem;
+        margin-right: 1rem;
+        align-items: center;
+        vertical-align: middle;
+    }
+    
+    .nav--menu__img{
+        margin-left: 0.5rem;
+        width: 0.6rem;
+    }
+    .nav--menu__text{
+        font-weight: 600;
+        color: var(--color-monthly);
+    }
+
+    /* hover nav--wrap*/
+    .nav--dropdown__wrap{
+        display: none;
+        position: absolute;
+        max-width: 22rem;
+        min-width: 20rem;
+        height: 30rem;
+        top: 2.2rem;
+        left: -74%;
+        border-radius: 0.3rem;
+        background-color: white;
+        box-shadow: 0 1px 60px 0 rgba(2 4 69/10%); /* t r b l color*/
+    }
+    .nav--menu__main:hover .nav--dropdown__wrap{
+        display: block;
+    }
+
+    .dropdown__product--area{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 2rem 0 2rem;
+    }
+    .dropdown__product--area:hover{
+        background-color: var(--color-white-hover);
+    }
+
+    .dropdown__product--content{
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #cdced1;
+    }
+    .dropdown__product--htext{
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: var(--color-monthly);
+    }
+    .dropdown__product--text{
+        letter-spacing: 0.5px;
+    }
+
+    .dropdown__arrow{
+        display: none;
+        position: absolute;
+        top: 4rem;
+        right: 0.2rem;
+    }
+    .dropdown__arrow__img{
+        width: 1.2rem;
+        transform: rotate(270deg);
+    }
+    .dropdown__product--area:hover .dropdown__arrow{
+        display: block;
+    }
+
+    .dropdown__extension{
+        display: none;
+        position: absolute;
+        max-width: 42rem;
+        min-width: 40rem;
+        height: 30rem;
+        top: 0;
+        left: 20rem;
+        border-radius: 0.3rem;
+        background-color: #fff;
+    }
+    .dropdown__product--area:hover .dropdown__extension{
+        display: block;
+    }
+
+    .dropdown__grid{
+        display: grid;
+        height: 100%;
+        padding: 0.5rem;
+        grid-template-columns: 1fr 1fr; /* สร้างพื้นที่2ช่อง 1fr|1fr */
+        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 1rem; /* สร้างระยะห่างด้านL,R 1rem เหมือน padding แต่ใช้กับ grid*/
+        grid-row-gap: 1rem; /* สร้างระยะห่างด้านT,B 1rem เหมือน padding แต่ใช้กับ grid*/
+    }
+    .dropdown__link--flex{
+        display: flex;
+        min-width: 18.75rem;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    .dropdown__link--flex:hover{
+        background-color: var(--color-white-hover);
+    }
+
+    .link--flex__content{
+        display: flex;
+        align-items: flex-start;
+    }
+    .link--flex__img{
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+    .link--flex__text{
+        margin-left: 0.5rem;
+    }
+    .link--flex__htext{
+        margin-bottom: 0.5rem;
+    }
+    .link--flex__text14{
+        font-size: 0.8rem;
+    }
+
+
+    .nav--dropdown__thidden{
+        display: none;
+    }
+    .nav--menu__main:hover .nav--dropdown__thidden{
+        display: block;
+    }
+
+    .nav--dropdown__tflex{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 1.2rem;
+        right: -34rem;
+        box-shadow: 0 1px 60px 0 rgba(2 4 69 /10%);
+    }
+    .nav--dropdown__tmenu{
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        /* height: 30.875rem; */
+        margin-top: 0.5rem;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+    .nav--dropdown__twrap{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* min-width: 16.25rem; */
+        white-space: nowrap; /* ตัดคำ*/
+        cursor: pointer;
+    }
+    .nav--dropdown__twrap:hover{
+        background-color: var(--color-white-hover);
+    }
+
+    .nav--dropdown__tcontent{
+        display: flex;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 2rem;
+        margin-right: auto;
+        padding: 0.5rem 2rem;
+    }
+    .nav--dropdown__t--text{
+        margin-left: 0.5rem;
+    }
+
+    .nav--dropdown__t--arrow{
+        display: none;
+        position: absolute;
+        margin-left: 13.5rem;
+        
+    }
+    .nav--dropdown__twrap:hover .nav--dropdown__t--arrow{
+        display: block;
+    }
+
+    .nav--dropdown__textension{
+        display: flex;
+        padding: 1rem 2rem 2rem 2rem;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+    .nav--dropdown__tcontainer{
+        width: auto;
+        margin-bottom: 2rem;
+    }
+    .nav--dropdown__text24{
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--color-monthly);
+    }
+    .nav--dropdown__link{
+        display: inline-block;
+        background-image: url("https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/61937382e5d4af7188bd59be_Templates%20Menu%20BG%201.svg");
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        min-width: 24.25rem;
+        width: 100%;
+        padding: 1.5rem 1.2rem;
+        margin-bottom: 0.5rem;
+        border-radius: 3px;
+        border: 1px solid rgba(0 0 0 /10%);
+        text-align: center;
+    }
+    .nav--dropdown__link:hover{
+        transform: scale(1.05); /* เมื่อกดจะทำการย่อขยาดตาม sacle<1 จะเล็กลงสูง ,sacle>1 จะใหญ่ขึ้น*/
+    }
+}
