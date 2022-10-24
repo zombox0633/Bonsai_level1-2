@@ -19,6 +19,7 @@ a, h1, h2, h3, h4, h5, span{
 :root{
     --color-icon:#00b289;
     --color-click:#009975;
+    --btn-border: #808080;
     --color-text: #4c4d5f;
     --color-monthly:#60626e;
     --color-quotations-box:#fbfcff;
@@ -63,53 +64,77 @@ a, h1, h2, h3, h4, h5, span{
     display: none;
 }
 
-.nav--main__buttom{
-    position: relative;
-    float: right;
-    display: block;
-    width: 60px;
-    height: 60px;
-    top: -0.5rem;
-    padding: 16px;
-    margin-right: 5%;
-    border-style: none; 
-}
-.nav__buttom{
-    position: absolute;
-    width: 36px;
-    height: 3px;
-    border-radius: 16%;
-    right: 0.75rem;
-    background-color: var(--color-text);
-    z-index: 99;
-}
-.nav__buttom--line1{
-    top: 16px;
-}
-
-.nav__buttom--line2{
-    top: 28px;
-}
-.transform:active { 
-    transition: all 10s ease;
-}
-.transform-active {
+/*nav--main__buttom*/
+#nav--main__buttom{
     display: none;
 }
-
-.nav__buttom--line3{
-    top: 40px;
+label[for='nav--main__buttom']{
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: #fff;
+    z-index: 999;
+}
+.hide-m{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.menu-line{
+    display: block;
+    width: 1rem;
+    height: 2px;
+    margin: 10px 0 5px;
+    background-color: var(--btn-border);
+    transform-origin: right center;
+    transition: 500ms;
 }
 
+#nav--main__buttom:checked + label span:nth-child(2),
+#nav--main__buttom:checked + label span:nth-child(5){
+  transform: scale(0);
+}
+.hide-m > span:nth-child(4), /* row1(1,4),row1(2,5),row3(3,6)*/
+.hide-m > span:nth-child(5),
+.hide-m > span:nth-child(6){
+    transform-origin: left center;
+}
+#nav--main__buttom:checked + label span:nth-child(1){
+    transform: translateY(17px) rotate(45deg); /* เมื่อกดทำการเปลี่ยนที่ในแนวแกนY และ หมุน 45deg*/
+}
+#nav--main__buttom:checked + label span:nth-child(4){
+    transform: translateY(17px) rotate(-45deg);
+}
+#nav--main__buttom:checked + label span:nth-child(3){
+    transform: translateY(-17px) rotate(-45deg);
+}
+#nav--main__buttom:checked + label span:nth-child(6){
+    transform: translateY(-17px) rotate(45deg);
+}
 
 /* hidden button click */
 .nav__hidden{
-    display: none;
-    background-color: white;
+    visibility: hidden;
+    position: relative;
+    display: block;
+    background-color: #fff;
     width: auto;
     height: 150rem;
-    z-index: 88;
+    z-index: 998;
+    transform: translate(110%);
+    transition: 1s;
 }
+#nav--main__buttom:checked ~ .nav__hidden{
+    visibility: visible;
+    transform: translate(0);
+}
+
 .main--nav__hidden{
     padding-top: 5rem;
     padding-left: 2rem;
@@ -190,7 +215,8 @@ a, h1, h2, h3, h4, h5, span{
 
 @media (min-width:992px){
     /* hidden buttion  */
-    .nav--main__buttom{
+    label[for='nav--main__buttom']{
+        visibility: hidden;
         display: none;
     }
 
@@ -267,7 +293,7 @@ a, h1, h2, h3, h4, h5, span{
         max-width: 22rem;
         min-width: 20rem;
         height: 30rem;
-        top: 2.2rem;
+        top: 2.6rem;
         left: -74%;
         border-radius: 0.3rem;
         background-color: white;
@@ -410,7 +436,7 @@ a, h1, h2, h3, h4, h5, span{
         display: flex;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        margin-left: 2rem;
+        margin-left: 1rem;
         margin-right: auto;
         padding: 0.5rem 2rem;
     }
@@ -428,6 +454,27 @@ a, h1, h2, h3, h4, h5, span{
         display: block;
     }
 
+    .nav--dropdown__t1{
+        display: block;
+    }
+    .nav--dropdown__t2{
+        display: none;
+    }
+    .nav--dropdown__t3{
+        display: none;
+    }
+    .nav--dropdown__t4{
+        display: none;
+    }
+    .nav--dropdown__t5{
+        display: none;
+    }
+    .nav--dropdown__t6{
+        display: none;
+    }
+    .nav--dropdown__t7{
+        display: none;
+    }
     .nav--dropdown__textension{
         display: flex;
         padding: 1rem 2rem 2rem 2rem;
@@ -436,7 +483,7 @@ a, h1, h2, h3, h4, h5, span{
     }
     .nav--dropdown__tcontainer{
         width: auto;
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }
     .nav--dropdown__text24{
         font-size: 1.25rem;
@@ -460,5 +507,18 @@ a, h1, h2, h3, h4, h5, span{
     }
     .nav--dropdown__link:hover{
         transform: scale(1.05); /* เมื่อกดจะทำการย่อขยาดตาม sacle<1 จะเล็กลงสูง ,sacle>1 จะใหญ่ขึ้น*/
+    }
+
+    .nav--dropdown__link--all{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .nav--dropdown__link--atext{
+        font-weight: 600;
+        color: var(--color-icon);
+    }
+    .nav--dropdown__link--atext:hover{
+        color: var(--color-click);
     }
 }
